@@ -59,40 +59,77 @@
     <div class="container">
       <div class="flipbook">
         <div class="page" style="background-image:url(../images/front.jpg)"></div>
-        <div class="page" id="humpty">
-          <div class="titlecard"><img class="story-element" id="humpty-title" src="../images/humpty-title.png" alt="Humpty Dumpty" onclick="humptyStart()"></div>
+        <div class="page" id="wall">
+          <div class="titlecard" id="humpty-title"><img class="story-element" src="../images/humpty-title.png" alt="Humpty Dumpty" onclick="start('humpty')"></div>
           <div class="row d-flex justify-content-end">
             <div class="col-7">
-              <p class="lines" id="hline">Humpty Dumpty sat on a wall,</p>
+              <p class="lines" id="humptyline0">Humpty Dumpty sat on a wall,</p>
             </div>
           </div>
           <div class="row d-flex justify-content-end">
             <div class="col-7">
-              <p class="lines" id="hline1">Humpty Dumpty had a great fall,</p>
+              <p class="lines" id="humptyline1">Humpty Dumpty had a great fall,</p>
             </div>
           </div>
           <div class="row d-flex justify-content-end">
             <div class="col-7">
-              <p class="lines" id="hline2">All the kings horses,</p>
+              <p class="lines" id="humptyline2">All the kings horses,</p>
             </div>
           </div>
           <div class="row d-flex justify-content-end">
             <div class="col-7">
-              <p class="lines" id="hline3">And all the kings men,</p>
+              <p class="lines" id="humptyline3">And all the kings men,</p>
             </div>
           </div>
           <div class="row d-flex justify-content-end">
             <div class="col-7">
-              <p class="lines" id="hline4">Couldn't put Humpty together again.</p>
+              <p class="lines" id="humptyline4">Couldn't put Humpty together again.</p>
             </div>
           </div>
           <div class="row d-flex justify-content-center" id="humpty-box">
-            <div class="col-12">
-              <img class="story-element" id="humpty1" src="../images/humpty.png" onclick="humptyGo()">
+            <div class="col-12" id="humpty1">
+              <img class="story-element" src="../images/humpty.png" onclick="go('humpty')">
             </div>
           </div>
         </div>
-        <div class="page" style="background-image:url(../images/hill.jpg)"></div>
+        <div class="page" id="jackJill">
+          <div class="titlecard" id="jackJill-title"><img class="story-element" src="../images/jackJill-title.png" alt="Jack and Jill" onclick="start('jackJill')"></div>
+          <div class="row d-flex justify-content-end">
+            <div class="col-7">
+              <p class="lines" id="jackJillline0">Jack and Jill,</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-end">
+            <div class="col-7">
+              <p class="lines" id="jackJillline1">Went up the hill,</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-end">
+            <div class="col-7">
+              <p class="lines" id="jackJillline2">To fetch a pail of water,</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-end">
+            <div class="col-7">
+              <p class="lines" id="jackJillline3">Jack fell down,</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-end">
+            <div class="col-7">
+              <p class="lines" id="jackJillline4">And broke his crown,</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-end">
+            <div class="col-7">
+              <p class="lines" id="jackJillline5">And Jill came tumbling after.</p>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center" id="jackJill-box">
+            <div class="col-12" id="jackJill1">
+              <img class="story-element" src="../images/jackJill.png" onclick="go('jackJill')">
+            </div>
+          </div>
+        </div>
         <div class="page" style="background-image:url(../images/meadow1.jpg)"></div>
         <div class="page" style="background-image:url(../images/meadow2.jpg)"></div>
         <div class="page" style="background-image:url(../images/rear.jpg)"></div>

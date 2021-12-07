@@ -28,34 +28,75 @@ function loadApp() {
 }
 
 
-// Humpty Dumpty interactions
+// Story interactions
 
 var humptyPath = 0;
-const humptyBox1 = "<div class='col-12'><img class='story-element' id='humpty2' src='../images/fall.png' onclick='humptyGo()'></div>";
-const humptyBox2 = "<div class='col-12'><img class='story-element' id='humpty3' src='../images/down.png' onclick='humptyGo()'></div>";
-const humptyBox3 = "<div class='col-12'><img class='story-element' id='humpty4' src='../images/men.png' onclick='humptyGo()'></div>";
-const humptyBox4 = "<div class='col-12'><img class='story-element' id='humpty4' src='../images/hend.png' onclick='humptyGo()''></div>";
-const humptyBox5 = "<div class='col-12'><img class='story-element' id='humpty1' src='../images/humpty.png' onclick='humptyGo()'></div>";
+var jackJillPath = 0;
 
-function humptyStart() {
-	document.getElementById("humpty-title").style.display = "none";
-	document.getElementById("hline").style.visibility = "visible";
-	document.getElementById("humpty-box").style.visibility = "visible";
+function start(story) {
+	document.getElementById(story+"-title").style.display = "none";
+	document.getElementById(story+"line"+0).style.visibility = "visible";
+	document.getElementById(story+"-box").style.visibility = "visible";
 }
 
-function humptyGo() {
-	if (humptyPath<4) {
+function go(story) {
+	console.log("Humpty: "+humptyPath);
+	console.log("JackJill: "+jackJillPath);
+	if (story == "humpty") {
+		var lines = 5;
 		humptyPath++;
-		document.getElementById("hline"+humptyPath).style.visibility = "visible";
-		document.getElementById("humpty-box").innerHTML = eval("humptyBox"+humptyPath);
+		if (humptyPath == 1) {
+			var img = "fall";
+		};
+		if (humptyPath == 2) {
+			var img = "down";
+		};
+		if (humptyPath == 3) {
+			var img = "men";
+		};
+		if (humptyPath == 4) {
+			var img = "hend";
+		};
+		if (humptyPath == 5) {
+			var img = "humpty";
+		};
+	};
+	if (story == "jackJill") {
+		var lines = 6;
+		jackJillPath++;
+		if (jackJillPath < 3 || jackJillPath > 6) {
+			var img = "jackJill";
+		};
+		if (jackJillPath > 2 && jackJillPath < 5) {
+			var img = "jackfall";
+			var img2 = "jill";
+		};
+		if (jackJillPath == 5) {
+			var img = "jackfall";
+			var img2 = "jillfall";
+		};
+		if (jackJillPath == 6) {
+			var img = "jackJill";
+		};
+	};
+	if (story == "jackJill" && jackJillPath > 2 && jackJillPath < 6) {
+		var stage = "<div class=\"col-12\"><div id=\"jillian\"><img class=\"story-element\" src=\"../images/"+img2+".png\" onclick=\"go('"+story+"')\"></div><div id="+story+(eval(story+"Path")+1)+"><img class=\"story-element\" src=\"../images/"+img+".png\" onclick=\"go('"+story+"')\"></div></div>"
 	} else {
-		document.getElementById("hline").style.visibility = "hidden";
-		for (i=1;i<=humptyPath;i++) {
-			document.getElementById("hline"+i).style.visibility = "hidden";
+		var stage = "<div class=\"col-12\" id="+story+(eval(story+"Path")+1)+"><img class=\"story-element\" src=\"../images/"+img+".png\" onclick=\"go('"+story+"')\"></div>";
+	}
+	document.getElementById(story+"-box").innerHTML = stage;
+	if (eval(story+"Path")<lines) {
+		document.getElementById(story+"line"+eval(story+"Path")).style.visibility = "visible";
+	} else {
+		for (i=0;i<eval(story+"Path");i++) {
+			document.getElementById(story+"line"+i).style.visibility = "hidden";
 		}
-		document.getElementById("humpty-box").innerHTML = humptyBox5;
-		document.getElementById("humpty-box").style.visibility = "hidden";
-		document.getElementById("humpty-title").style.display = "block";
-		humptyPath = 0;
+		document.getElementById(story+"-box").style.visibility = "hidden";
+		document.getElementById(story+"-title").style.display = "flex";
+		if (story == "humpty") {
+			humptyPath = 0;
+		} else if (story == "jackJill") {
+			jackJillPath = 0;
+		}
 	}
 }

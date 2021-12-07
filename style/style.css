@@ -31,9 +31,6 @@
     margin-top:30px;
 }
 
-.accordion-button:not(.collapsed){
-    color:#212529;
-}
 @media (max-width: 559px){
     .wide{
         display:none;
@@ -55,17 +52,58 @@
     color: black;
 }
 
+/* Storybook */
+
 .titlecard {
+    width: 100%;
     margin-top: 45%;
-    margin-left: 18%;
-    position: absolute;
+    display: flex;
+    justify-content: center;
 }
+
 .story-element:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
 
-#humpty {
+.lines {
+    margin-bottom: 2px;
+    font-size: small;
+}
+
+#storybook {
+    height: 600px;;
+}
+
+#storybye {
+    display: none;
+}
+
+@media (max-width: 600px){
+    #storybye {
+        display: block;
+    }
+    #storybook {
+        display: none;
+    }
+}
+
+@media (max-height: 600px){
+    #storybook {
+        display: none;
+    }
+    #storybye {
+        display: block;
+    }
+}
+
+/* Humpty Dumpty */
+
+#humpty-box{
+    visibility:hidden;
+}
+
+#wall {
     background-image: url("../images/wall.jpg");
 }
 
@@ -87,54 +125,107 @@
     margin-top: 3%;
 }
 
-.lines {
-    margin-bottom: 2px;
-    font-size: small;
+#humpty6 {
+    margin-top: 2%;
+    margin-left: 20%;
 }
 
-#humpty-box{
+#humptyline0{
+    visibility:hidden;
+}
+#humptyline1{
     visibility:hidden;
 }
 
-
-#hline{
-    visibility:hidden;
-}
-#hline1{
+#humptyline2{
     visibility:hidden;
 }
 
-#hline2{
+#humptyline3{
     visibility:hidden;
 }
 
-#hline3{
+#humptyline4{
     visibility:hidden;
 }
 
-#hline4{
+/* Jack and Jill */
+
+#jackJill-box{
     visibility:hidden;
 }
 
-#storybook {
-    height: 600px;;
+#jackJill {
+    background-image: url("../images/hill.jpg");
 }
-#storybye {
-    display: none;
+
+#jackJill1 {
+    margin-top: 80%;
+    margin-left: 100%;
 }
-@media (max-width: 600px){
-    #storybye {
-        display: block;
-    }
-    #storybook {
-        display: none;
-    }
+
+#jackJill2 {
+    margin-top: 60%;
+    margin-left: 70%;
+    transform: scale(0.7);
 }
-@media (max-height: 600px){
-    #storybook {
-        display: none;
-    }
-    #storybye {
-        display: block;
-    }
+
+#jackJill3 {
+    margin-top: 40%;
+    margin-left: 40%;
+    transform: scale(0.4);
+}
+
+#jackJill4 {
+    margin-top: -15%;
+    margin-left: 35%;
+    transform: scale(0.4);
+}
+
+#jackJill5 {
+    margin-top: -20%;
+    margin-left: 10%;
+    transform: rotate(300deg) scale(0.6);
+}
+
+#jackJill6 {
+    margin-top: 5%;
+    margin-left: 40%;
+    transform:rotate(20deg);
+}
+
+#jillian {
+    margin-top: 40%;
+    margin-left: 35%;
+    transform: scale(0.4);
+    position: relative;
+    z-index: 2;
+}
+
+#jackJill7 {
+    margin-top: 80%;
+    margin-left: 100%;
+}
+
+#jackJillline0{
+    visibility:hidden;
+}
+#jackJillline1{
+    visibility:hidden;
+}
+
+#jackJillline2{
+    visibility:hidden;
+}
+
+#jackJillline3{
+    visibility:hidden;
+}
+
+#jackJillline4{
+    visibility:hidden;
+}
+
+#jackJillline5{
+    visibility:hidden;
 }
