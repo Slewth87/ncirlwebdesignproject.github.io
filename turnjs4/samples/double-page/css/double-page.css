@@ -21,15 +21,31 @@ body{
 }
 
 .flipbook-viewport .flipbook{
-	width:800px;
-	height:400px;
-	left:-400px;
-	top:-200px;
+	width:600px;
+	height:600px;
+	left:-300px;
+	top:-300px;
+}
+@media (max-height: 800px){
+	.flipbook-viewport .flipbook{
+		width:600px;
+		height:600px;
+		left:-300px;
+		top:-250px;
+	}
+}
+@media (max-height:700px){
+	.flipbook-viewport .flipbook{
+		width:600px;
+		height:600px;
+		left:-300px;
+		top:-200px;
+	}
 }
 
 .flipbook-viewport .page{
-	width:400px;
-	height:400px;
+	width:300px;
+	height:600px;
 	background-color:white;
 	background-repeat:no-repeat;
 	background-size:100% 100%;
@@ -67,7 +83,7 @@ body{
 }
 
 .flipbook-viewport .double{
-	width:800px;
-	height:400px;
+	width:600px;
+	height:600px;
 	background-size:100% 100%;
 }
