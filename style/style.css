@@ -229,3 +229,96 @@
 #jackJillline5{
     visibility:hidden;
 }
+
+/* Little Miss Muffet */
+
+#missMuffet-box{
+    visibility:hidden;
+}
+
+#missMuffet-box2{
+    visibility:hidden;
+    margin-top: 70%;
+    margin-left: 30%;
+}
+
+#missMuffetp1 {
+    background-image: url("../images/meadow1.jpg");
+}
+
+#missMuffetp2 {
+    background-image: url("../images/meadow2.jpg");
+}
+
+#missMuffet1 {
+    margin-top: 90%;
+    margin-left: 30%;
+}
+
+#missMuffet2 {
+    margin-top: 95%;
+    margin-left: 40%;
+}
+
+#missMuffet3 {
+    margin-top: 95%;
+    margin-left: 40%;
+}
+
+#missMuffet4 {
+    margin-top: 16%;
+    margin-left: 22%;
+}
+
+#missMuffet5 {
+    margin-top: -18%;
+    margin-left: 22%;
+}
+
+#missMuffet6 {
+    margin-top: -38%;
+    margin-left: 15%;
+}
+
+#missMuffet7 {
+    margin-top: 90%;
+    margin-left: 30%;
+}
+
+#spider3 {
+    margin-top: -80%;
+    margin-left: 10%;
+}
+
+#spider4 {
+    margin-top: -45%;
+    margin-left: 10%;
+}
+
+#missMuffet7 {
+    margin-top: 90%;
+    margin-left: 30%;
+}
+
+#missMuffetline0{
+    visibility:hidden;
+}
+#missMuffetline1{
+    visibility:hidden;
+}
+
+#missMuffetline2{
+    visibility:hidden;
+}
+
+#missMuffetline3{
+    visibility:hidden;
+}
+
+#missMuffetline4{
+    visibility:hidden;
+}
+
+#missMuffetline5{
+    visibility:hidden;
+}
