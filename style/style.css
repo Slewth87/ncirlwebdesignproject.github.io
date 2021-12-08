@@ -52,6 +52,15 @@
     color: black;
 }
 
+.required {
+    color: red;
+}
+
+.informative {
+    color: gray;
+    font-size: smaller;
+}
+
 /* Storybook */
 
 .titlecard {
