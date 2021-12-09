@@ -1,3 +1,9 @@
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
 .lefter{
     padding-left:0;
 }
@@ -22,6 +28,10 @@
         top: 60%;
         transform: translateY(-50%);
     }
+}
+
+a {
+    text-decoration: solid;
 }
 .backbox{
     background: rgba(50, 50, 50, 0.25);

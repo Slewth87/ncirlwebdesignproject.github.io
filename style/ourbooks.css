@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+
 :root{
     --green:#27ae60;
     --dark-color:#219150;
@@ -11,7 +12,6 @@
 }
 
 *{
-    font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
     outline: none; border:none;
@@ -21,13 +21,17 @@
     transition:width none;
 }
 
-html{
+html {
     font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 5rem;
-    scroll-behavior: smooth;
 }
 
+.lefter h3 {
+    font-size: 160%;
+}
+
+.lefter {
+    font-size: 160%;
+}
 
 section{
     padding:5rem 9%;
@@ -273,6 +277,7 @@ section{
     .home .row .content h3{
         font-size: 3.5rem;
     }
+}
 
 @media (max-width:450px){
 
@@ -281,5 +286,3 @@ section{
     }
 
 }
-
-
