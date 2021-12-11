@@ -16,7 +16,6 @@
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
     transition:all .2s linear;
     transition:width none;
 }
@@ -63,26 +62,6 @@ section{
     background: #fff;
     border:var(--border);
 }
-
-.header .header-2{
-    background:var(--green);
-}
-
-.header .header-2 .navbar{
-    text-align: center;
-}
-
-.header .header-2 .navbar a{
-    color:#fff;
-    display: inline-block;
-    padding:1.2rem;
-    font-size: 1.7rem;
-}
-
-.header .header-2 .navbar a:hover{
-    background:var(--dark-color);
-}
-
 
 /* home section  */
 
@@ -183,16 +162,11 @@ section{
 }
 
 .arrivals .arrivals-slider .box .content .price{
-    font-size: 2.2rem;
+    font-size: 1.4rem;
     color:var(--black);
     padding-bottom: .5rem;
 }
 
-.arrivals .arrivals-slider .box .content .price span{
-    font-size: 1.5rem;
-    color:var(--light-color);
-    text-decoration: line-through;
-}
 
 .arrivals .arrivals-slider .box .content .stars i{
     font-size: 1.5rem;
