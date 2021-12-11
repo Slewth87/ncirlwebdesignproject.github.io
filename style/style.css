@@ -4,6 +4,10 @@ html{
     scroll-behavior: smooth;
 }
 
+.navbar{
+    z-index: 2;
+}
+
 .lefter{
     padding-left:0;
 }
@@ -69,9 +73,31 @@ a {
 .informative {
     color: gray;
     font-size: smaller;
+    margin-bottom: 0px;
 }
 
 /* Storybook */
+
+@media (min-width: 1000px){
+    #storybook {
+        margin-top: -5%;
+    }
+}
+
+@media (max-width: 1000px){
+    #storybook {
+        margin-top: -10%;
+    }
+}
+.flipbook {
+    max-width: 600px;
+}
+#storybook {
+    position: absolute;
+    overflow-x:auto;
+    min-height: 820px;
+    min-width: 600px;
+}
 
 .titlecard {
     width: 100%;
@@ -88,32 +114,6 @@ a {
 .lines {
     margin-bottom: 2px;
     font-size: small;
-}
-
-#storybook {
-    height: 600px;;
-}
-
-#storybye {
-    display: none;
-}
-
-@media (max-width: 600px){
-    #storybye {
-        display: block;
-    }
-    #storybook {
-        display: none;
-    }
-}
-
-@media (max-height: 600px){
-    #storybook {
-        display: none;
-    }
-    #storybye {
-        display: block;
-    }
 }
 
 /* Humpty Dumpty */
