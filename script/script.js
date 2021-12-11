@@ -51,6 +51,7 @@ function webhookSend() {
     };
 
     console.log(JSON.stringify(jsonLoad));
+
     // Ajax JQuery approach
     // $.post(hook,jsonLoad, function(data,status){
     //     console.log(data+" and status is "+status);
@@ -58,35 +59,35 @@ function webhookSend() {
 
     // XMLHttpRequest() approach
 
-    // request.addEventListener("load", reqListener);
-    // request.open("POST", hook, true);
-    // request.setRequestHeader("Content-type", "application/json");
-    // request.send(JSON.stringify(jsonLoad));
-    // console.log("Sent to "+hook);
+    request.addEventListener("load", reqListener);
+    request.open("POST", hook, true);
+    request.setRequestHeader("Content-type", "application/json");
+    request.send(JSON.stringify(jsonLoad));
+    console.log("Sent to "+hook);
 
-//     request.onprogress = function(event) {
-//         if (event.lengthComputable) {
-//            alert(`Received ${event.loaded} of ${event.total} bytes`);
-//         } else {
-//            alert(`Received ${event.loaded} bytes`); // no Content-Length
-//         }
+    request.onprogress = function(event) {
+        if (event.lengthComputable) {
+           alert(`Received ${event.loaded} of ${event.total} bytes`);
+        } else {
+           alert(`Received ${event.loaded} bytes`); // no Content-Length
+        }
      
-//      };
+     };
      
-//      request.onerror = function() {
-//         alert("Request failed");
-//      };
-// };
-// function reqListener () {
-//     console.log(this.responseText);
+     request.onerror = function() {
+        alert("Request failed");
+     };
+};
+function reqListener () {
+    console.log(this.responseText);
 
 // Axios approach
 
-axios({
-    method: 'post',
-    url: hook,
-    data: jsonLoad
-})
-.then(data=>console.log(data))
-.catch(err=>console.log(err))
+// axios({
+//     method: 'post',
+//     url: hook,
+//     data: jsonLoad
+// })
+// .then(data=>console.log(data))
+// .catch(err=>console.log(err))
 }

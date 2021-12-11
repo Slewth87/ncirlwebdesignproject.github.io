@@ -1,6 +1,6 @@
 
 a{color: #0252aa; text-decoration: none; cursor:pointer;}
-a:hover{text-decoration: underline;}
+
 a img{border: 0;}
 
 .cl{display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
@@ -13,13 +13,13 @@ a img{border: 0;}
 #slider{position: relative; z-index: 1; height: 225px; margin-bottom: 15px;}
 #slider .shell{position: relative; height: 225px;}
 
-.slider-left{float: left; display: inline; width: 284px; height: 207px; color: ##0e3e84;  padding: 18px 20px 0 20px; }
+.slider-left{float: left; display: inline; width: 284px; height: 207px; color: #0e3e84;  padding: 18px 20px 0 20px; }
 .slider-left h2{ font-size: 20px; font-weight: normal; margin-bottom: 13px; }
 .slider-left p{ font-size: 13px; line-height: 18px; font-family: Arial; }
 .slider-left .subs {background:linear-gradient(180deg, #99ccff, #e6f2ff);}
-.slider-left .subs :hover{}
+
 .slider-right{ position: relative; float: left; display: inline; width: 656px; height: 225px; }
-.slider-content{ position: relative; width: 1200px; height: 225px; overflow: ;  }
+.slider-content{ position: relative; width: 1200px; height: 225px;  }
 .slider-content ul{ list-style: none outside none; height: 100%; overflow: hidden; }
 .slider-content ul li,
 .jcarousel-clip{ position: relative; width: 680px; height: 225px; z-index: 1; }
@@ -31,7 +31,7 @@ a img{border: 0;}
 .slider-nav ul li a:hover,
 .slider-nav ul li a.active { background: url(..images/images/slider-nav-hover.png) no-repeat 0 0; }
 
-#main { }
+
 #main h2 { font-size: 20px; font-weight: normal; color: #4c4c4c; }
 
 #sidebar { float: left; display: inline; width: 324px; }
@@ -39,7 +39,7 @@ a img{border: 0;}
 #sidebar .text-container h2 { margin-bottom: 6px; }
 
 
-.post { }
+
 .post h2 { border-bottom: 5px solid #e4e4e4; padding-bottom: 5px; margin-bottom: 11px; }
 .post .more { display: block; background: url(images/pink-arrow.gif) no-repeat 0 4px; color: #c40083; font-size: 11px; line-height: 12px; padding-left: 10px; margin-top: 10px; }
 .post .more:hover { color: #000; text-decoration: none; }
@@ -55,5 +55,3 @@ a img{border: 0;}
 #footer .shell { padding: 26px 0 0 0; }
 #footer a { color: #7f7f7f; }
 #footer p.left span { padding: 0 3px; }
-
-
