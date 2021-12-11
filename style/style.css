@@ -4,6 +4,65 @@ html{
     scroll-behavior: smooth;
 }
 
+/* footer  */
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+	text-align: center;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color:var(--black);
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    color:var(--light-color);
+    padding:1rem 0;
+}
+
+.footer .box-container .box a i{
+    color:var(--green);
+    padding-right: .5rem;
+}
+
+.footer .credit{
+    border-top: var(--border);
+    margin-top: 2rem;
+    padding:0 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color:var(--light-color);
+    text-align: center;
+}
+
+.footer .credit span{
+    color:#27ae60;
+}
+
+#foot-tweak {
+    font-size: 1.25rem;
+    color: gray;
+    --border: .1rem solid rgba(0,0,0,.1);
+    width: 77%;
+    margin:auto;
+    margin-top: 1%;
+}
+
+#book-foot{
+    font-size: 1.25rem;
+    color: gray;
+    --border: .1rem solid rgba(0,0,0,.1);
+    width: 77%;
+    margin:auto;
+    margin-top: 820px;
+}
+
 .navbar{
     z-index: 2;
 }
