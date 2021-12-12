@@ -1,7 +1,7 @@
 // Manage the contact page input
 
 // Sets the webhook to send the data to
-const hook = "https://dev.oscato.com/r2bim0n";
+const hook = "https://dev.oscato.com/4sfwlyf";
 
 // Processes the form input
 function webhookSend() {
