@@ -1,4 +1,4 @@
- body {
+ #wrapper {
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,13 +8,14 @@
     background: linear-gradient(#00000000, #abeb84);
     font-family: "Titillium Web", sans-serif;
   }
-  
+
+/*
   #wrapper{
 	  display: flex;
 	  min-height: 50vh;
 	  width: 100%;
 	}
-	
+*/	
 .stretch{
 	width: 100%;
 	align-self: stretch;
