@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script async type="text/javascript" src="../script/script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="../style/style.css" rel="stylesheet"/>
-  <title>Wallaby Books</title>
-  <link rel="icon" href="../images/favicon.ico" />
-</head>
-<body>
-  <nav class="navbar navbar-expand-md navbar-light bg-white spacer" id="wide">
-    <div class="container-fluid lefter">
-      <a class="spacer headline d-flex align-center" href="../index.html"><img src="../images/logo.png" alt="Wallaby Books" height="45"><h3 class="pt-1">Wallaby Books</h3></a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../blog/index.html">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../book/index.html">Book</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contact</a>
-        </li>
-      </ul>
-      </div>
-  </nav>
-  <div class="container-fluid lefter narrow">
-    <a class="spacer headline d-flex justify-content-around" href="../index.html"><img src="../images/logo.png"alt="Wallaby Books"></a>
-    <nav class="navbar navbar-expand wrap navbar-light bg-white spacer">
-      <div class="container d-flex justify-content-around">
+  <head>
+
+    <!--Set default page metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Javascript loads deferred in head rather than placed at end of html document, for better navigability of code-->
+
+    <!--Load Bootstrap Framework-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script defer async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Load custom code for managing the form-->
+    <script defer src="../script/script.min.js"></script>
+
+    <!--Use font-awesome fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!--Set common CSS for the website, also includes CSS modifications for the Flipbook-->
+    <link href="../style/style.min.css" rel="stylesheet"/>
+
+    <!--Set title and icon-->
+    <title>Wallaby Books</title>
+    <link rel="icon" href="../images/favicon.ico" />
+  </head>
+  <body>
+
+    <!--Set navbar header for widescreen, using bootstrap-->
+    <nav class="navbar navbar-expand-md navbar-light bg-white spacer" id="wide">
+      <div class="container-fluid lefter">
+        <a class="spacer headline d-flex align-center" href="../index.html"><img src="../images/logo.png" alt="Wallaby Books" height="45"><h3 class="pt-1">Wallaby Books</h3></a>
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="../index.html">Home</a>
@@ -51,36 +47,64 @@
             <a class="nav-link active" aria-current="page" href="#">Contact</a>
           </li>
         </ul>
-      </div>
+        </div>
     </nav>
-  </div>
-  <div class="container subpage">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-md-10 col-xl-7">
-        <h1>Contact us!</h1>
-        <p>Any questions? Please contact us below.</p>
-        <p>Please note, we do not take unsolicited manuscripts.</p>
-        <form id="contactForm" onsubmit="webhookSend()">
-          <p class="informative"><span class="required">*</span> = required</p>
-          <label for="email">Your e-mail<span class="required">*</span></label><br/>
-          <input type="email" id="email" required></label><br/>
-          <label for="name">Name<span class="required">*</span></label><br/>
-          <input type="text" id="name" required></label><br/>
-          <label for="number">Phone</label><br/>
-          <input type="tel" id="number"></label><br/>
-          <label for="subject">Subject<span class="required">*</span></label><br/>
-          <input type="text" id="subject" required></label><br/>
-          <label for="message">message<span class="required">*</span></label><br/>
-          <textarea id="message" required></textarea><br/>
-          <input type="submit" id="sendMail" value="Send">
-        </form>
+    <!--Set navbar header for narrow screens, using bootstrap-->
+    <div class="container-fluid lefter narrow">
+      <a class="spacer headline d-flex justify-content-around" href="../index.html"><img src="../images/logo.png" alt="Wallaby Books"></a>
+      <nav class="navbar navbar-expand wrap navbar-light bg-white spacer">
+        <div class="container d-flex justify-content-around">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../blog/index.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../book/index.html">Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!--Main page content-->
+    <div class="container subpage">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-10 col-xl-7">
+          <h1>Contact us!</h1>
+          <p>Any questions? Please contact us below.</p>
+          <p>Please note, we do not take unsolicited manuscripts.</p>
+
+          <!--Create contact form-->
+          <form id="contactForm" onsubmit="webhookSend()">
+            <p class="informative"><span class="required">*</span> = required</p>
+            <label for="email">Your e-mail<span class="required">*</span></label><br/>
+            <input type="email" id="email" required><br/>
+            <label for="name">Name<span class="required">*</span></label><br/>
+            <input type="text" id="name" required><br/>
+            <label for="number">Phone</label><br/>
+            <input type="tel" id="number"><br/>
+            <label for="subject">Subject<span class="required">*</span></label><br/>
+            <input type="text" id="subject" required><br/>
+            <label for="message">message<span class="required">*</span></label><br/>
+            <textarea id="message" required></textarea><br/>
+            <input type="submit" id="sendMail" value="Send">
+          </form>
+
+        </div>
       </div>
     </div>
-  </div>
-  <section class="footer">
+    <!-- footer section starts  -->
 
-      <div class="credit" id="foot-tweak">Created by <span>Svetlana, Richard & Dragan</span> | © Wallaby books </div>
+    <div class="footer">
 
-  </section>
-</body>
+        <div class="credit" id="foot-tweak">Created by <span>Svetlana, Richard & Dragan</span> | © Wallaby books</div>
+
+    </div>
+  </body>
 </html>

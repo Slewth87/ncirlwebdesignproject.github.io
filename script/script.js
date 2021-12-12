@@ -1,14 +1,25 @@
-const hook = "https://hookncirl.free.beeceptor.com";
+// Manage the contact page input
 
+// Sets the webhook to send the data to
+const hook = "https://dev.oscato.com/r2bim0n";
+
+// Processes the form input
 function webhookSend() {
+    // Commented out prevent default which can be uncommented to examine the log of a form interaction without it disappearing when a form submit automatically refreshes the page
+    // event.preventDefault();
+    // Logging to confirm the form input started
     console.log("triggered");
+    // Prepares a new http request
     let request = new XMLHttpRequest();
+    // Sets variables based on form input
     let email = document.getElementById("email").value;
     let name = document.getElementById("name").value;
     let number = document.getElementById("number").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("message").value;
+    // Logging to confirm variable set correctly
     console.log(message);
+    // Formats the data into a JSON suitable for sending to a Slack webhook
     let jsonLoad = {
         "blocks": [
             {
@@ -50,44 +61,25 @@ function webhookSend() {
         ]
     };
 
+    // Logging to inspect that the payload has been formatted correctly
     console.log(JSON.stringify(jsonLoad));
 
-    // Ajax JQuery approach
-    // $.post(hook,jsonLoad, function(data,status){
-    //     console.log(data+" and status is "+status);
-    // })
-
-    // XMLHttpRequest() approach
-
+    // Creates and sends the http request
     request.addEventListener("load", reqListener);
     request.open("POST", hook, true);
     request.setRequestHeader("Content-type", "application/json");
     request.send(JSON.stringify(jsonLoad));
-    console.log("Sent to "+hook);
 
-    request.onprogress = function(event) {
-        if (event.lengthComputable) {
-           alert(`Received ${event.loaded} of ${event.total} bytes`);
-        } else {
-           alert(`Received ${event.loaded} bytes`); // no Content-Length
-        }
-     
-     };
-     
-     request.onerror = function() {
-        alert("Request failed");
+    // Logging to confirm these steps executed
+    console.log("Sent to "+hook);
+    
+    // Log if there is an error
+    request.onerror = function() {
+        console.log("Request failed");
      };
 };
+
+// Log the response from the webhook
 function reqListener () {
     console.log(this.responseText);
-
-// Axios approach
-
-// axios({
-//     method: 'post',
-//     url: hook,
-//     data: jsonLoad
-// })
-// .then(data=>console.log(data))
-// .catch(err=>console.log(err))
 }

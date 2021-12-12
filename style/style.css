@@ -1,10 +1,68 @@
+/* Setting smooth screen scrolling experience */
 html{
     overflow-x: hidden;
     scroll-padding-top: 5rem;
     scroll-behavior: smooth;
 }
 
-/* footer  */
+/* Broad tweeks */
+a {
+    text-decoration: solid;
+}
+.backbox{
+    background: rgba(50, 50, 50, 0.25);
+    padding: 10px;
+}
+.subpage{
+    margin-top:30px;
+}
+
+/* Setting design and tweaks of the header navbar */
+.navbar{
+    z-index: 2;
+}
+
+.navbar a {
+    color:#27ae60;
+}
+
+.navbar a:hover {
+    color:#27ae60;
+}
+
+.lefter{
+    padding-left:0;
+}
+.widener{
+    padding-left:0;
+    padding-right:0;
+}
+.spacer{
+    padding-bottom:0;
+}
+
+@media (max-width: 559px){
+    #wide{
+        display:none;
+    }
+}
+@media (min-width:560px){
+    .narrow{
+        display: none;
+    }
+}
+
+.headline {
+    margin-left: 3%;
+    color: black;
+    text-decoration: none;
+    font-size: large;
+}
+.headline:hover{
+    color: black;
+}
+
+/* Setting footer design  */
 
 .footer{
     padding-bottom: 25px;
@@ -49,15 +107,17 @@ html{
     color:#27ae60;
 }
 
+/* Tweaks particular to footers not on the home page */
 #foot-tweak {
     font-size: 1.25rem;
-    color: gray;
+    color: darkgray;
     --border: .1rem solid rgba(0,0,0,.1);
     width: 77%;
     margin:auto;
     margin-top: 1%;
 }
 
+/* Tweaks particular to the footer on the story book page */
 #book-foot{
     font-size: 1.25rem;
     color: darkgray;
@@ -67,81 +127,13 @@ html{
     margin-top: 820px;
 }
 
+/* Text on the hompage intro */
 #intro a {
     text-decoration: underline;
     color: gray;
 }
 
-.navbar{
-    z-index: 2;
-}
-
-.navbar a {
-    color:#27ae60;
-}
-
-.navbar a:hover {
-    color:#27ae60;
-}
-
-.lefter{
-    padding-left:0;
-}
-.widener{
-    padding-left:0;
-    padding-right:0;
-}
-.spacer{
-    padding-bottom:0;
-}
-.carousel{
-    overflow:hidden;
-    max-height:500px;
-}
-.carousel-item{
-    height: 400px;
-    position: relative;
-}
-@media (min-width: 992px){
-    .carousel-inner img{
-        position: absolute;
-        top: 60%;
-        transform: translateY(-50%);
-    }
-}
-
-a {
-    text-decoration: solid;
-}
-.backbox{
-    background: rgba(50, 50, 50, 0.25);
-    padding: 10px;
-}
-.subpage{
-    margin-top:30px;
-}
-
-@media (max-width: 559px){
-    #wide{
-        display:none;
-    }
-}
-@media (min-width:560px){
-    .narrow{
-        display: none;
-    }
-}
-
-.headline {
-    margin-left: 3%;
-    color: black;
-    text-decoration: none;
-    font-size: large;
-}
-.headline:hover{
-    color: black;
-}
-
+/* Some contact page tweaks */
 .required {
     color: red;
 }
@@ -152,7 +144,7 @@ a {
     margin-bottom: 0px;
 }
 
-/* Storybook */
+/* Storybook specific css management */
 
 @media (min-width: 1000px){
     #storybook {
@@ -165,9 +157,11 @@ a {
         margin-top: -10%;
     }
 }
+
 .flipbook {
     max-width: 600px;
 }
+
 #storybook {
     position: absolute;
     overflow-x:auto;
@@ -192,16 +186,19 @@ a {
     font-size: small;
 }
 
-/* Humpty Dumpty */
+/* Humpty Dumpty specific */
 
-#humpty-box{
-    visibility:hidden;
-}
-
+/* Story background */
 #wall {
     background-image: url("../images/wall.jpg");
 }
 
+/* Image display box */
+#humpty-box{
+    visibility:hidden;
+}
+
+/* Various story images */
 #humpty1 {
     margin-top: 2%;
     margin-left: 20%;
@@ -225,9 +222,11 @@ a {
     margin-left: 20%;
 }
 
+/* Story text lines */
 #humptyline0{
     visibility:hidden;
 }
+
 #humptyline1{
     visibility:hidden;
 }
@@ -244,12 +243,18 @@ a {
     visibility:hidden;
 }
 
-/* Jack and Jill */
+/* Jack and Jill specific */
 
+/* Story background */
+#jackJill {
+    background-image: url("../images/hill.jpg");
+}
+
+/* Image display box */
 #jackJill-box{
     visibility:hidden;
 }
-
+/* Various story images */
 #jackJill {
     background-image: url("../images/hill.jpg");
 }
@@ -302,6 +307,7 @@ a {
     margin-left: 100%;
 }
 
+/* Story text lines */
 #jackJillline0{
     visibility:hidden;
 }
@@ -327,6 +333,16 @@ a {
 
 /* Little Miss Muffet */
 
+/* Story background */
+#missMuffetp1 {
+    background-image: url("../images/meadow1.jpg");
+}
+
+#missMuffetp2 {
+    background-image: url("../images/meadow2.jpg");
+}
+
+/* Image display boxes */
 #missMuffet-box{
     visibility:hidden;
 }
@@ -337,14 +353,7 @@ a {
     margin-left: 30%;
 }
 
-#missMuffetp1 {
-    background-image: url("../images/meadow1.jpg");
-}
-
-#missMuffetp2 {
-    background-image: url("../images/meadow2.jpg");
-}
-
+/* Various story images */
 #missMuffet1 {
     margin-top: 90%;
     margin-left: 30%;
@@ -395,6 +404,7 @@ a {
     margin-left: 30%;
 }
 
+/* Story text lines */
 #missMuffetline0{
     visibility:hidden;
 }
