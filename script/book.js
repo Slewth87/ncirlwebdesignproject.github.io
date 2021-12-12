@@ -115,9 +115,9 @@ function go(story) {
 
 	// Checking if it's a story and story stage that requires two images to be used in the page. And setting the appropriate images html data for the stage
 	if ( (story == "jackJill" && jackJillPath > 2 && jackJillPath < 6) || (story == "missMuffet" && missMuffetPath > 2 && missMuffetPath < 5) ) {
-		var stage = "<div class=\"col-12\"><div id=\""+split+"\"><img class=\"story-element\" src=\"../images/"+img2+".png\" onclick=\"go('"+story+"')\"></div><div id="+story+(eval(story+"Path")+1)+"><img class=\"story-element\" src=\"../images/"+img+".png\" onclick=\"go('"+story+"')\"></div></div>"
+		var stage = "<div class=\"col-12\"><div id=\""+split+"\"><img class=\"story-element\" src=\"../images/"+img2+".webp\" onclick=\"go('"+story+"')\"></div><div id="+story+(eval(story+"Path")+1)+"><img class=\"story-element\" src=\"../images/"+img+".webp\" onclick=\"go('"+story+"')\"></div></div>"
 	} else {
-		var stage = "<div class=\"col-12\" id="+story+(eval(story+"Path")+1)+"><img class=\"story-element\" src=\"../images/"+img+".png\" onclick=\"go('"+story+"')\"></div>";
+		var stage = "<div class=\"col-12\" id="+story+(eval(story+"Path")+1)+"><img class=\"story-element\" src=\"../images/"+img+".webp\" onclick=\"go('"+story+"')\"></div>";
 	}
 	// Sets the image html to the page
 	document.getElementById(story+"-box").innerHTML = stage;

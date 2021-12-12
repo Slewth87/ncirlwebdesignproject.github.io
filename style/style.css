@@ -190,7 +190,7 @@ a {
 
 /* Story background */
 #wall {
-    background-image: url("../images/wall.jpg");
+    background-image: url("../images/wall.webp");
 }
 
 /* Image display box */
@@ -247,7 +247,7 @@ a {
 
 /* Story background */
 #jackJill {
-    background-image: url("../images/hill.jpg");
+    background-image: url("../images/hill.webp");
 }
 
 /* Image display box */
@@ -255,10 +255,6 @@ a {
     visibility:hidden;
 }
 /* Various story images */
-#jackJill {
-    background-image: url("../images/hill.jpg");
-}
-
 #jackJill1 {
     margin-top: 80%;
     margin-left: 100%;
@@ -335,11 +331,11 @@ a {
 
 /* Story background */
 #missMuffetp1 {
-    background-image: url("../images/meadow1.jpg");
+    background-image: url("../images/meadow1.webp");
 }
 
 #missMuffetp2 {
-    background-image: url("../images/meadow2.jpg");
+    background-image: url("../images/meadow2.webp");
 }
 
 /* Image display boxes */
