@@ -144,6 +144,10 @@ a {
     margin-bottom: 0px;
 }
 
+#phoneCode {
+    width: 50px;
+}
+
 /* Storybook specific css management */
 
 @media (min-width: 1000px){
