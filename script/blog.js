@@ -1,38 +1,95 @@
-function mycarousel_initCallback(carousel) {
-    $('.slider-nav a').bind('click', function() {
-        carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
-        return false;
-    });
-};
+/* sign up form */
 
-function mycarousel_itemFirstInCallback(carousel, item, idx, state) {
-	$('.slider-nav ul li a').removeClass('active');
-	$('.slider-nav ul li a').eq(idx-1).addClass('active');
-};
+// Get the modal
+var modal = document.getElementById('id01');
 
-$(function(){
-	if ( $.browser.msie && $.browser.version.substr(0,1) == 6 ) {
-		DD_belatedPNG.fix('#navigation a, #navigation a:hover, #navigation a.active, .dd-b, .dd');
-	}
-	$('#navigation > ul > li').hover(function(){
-	$(this).find('.dd-holder').show();
-	$(this).find('a:eq(0)').addClass('hover');
-	},
-	function(){
-		$(this).find('.dd-holder').hide();
-		$(this).find('a:eq(0)').removeClass('hover');
-	});
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
 
-	$('.slider-content ul').jcarousel({
-		start: 2,
-		auto: 3,
-		wrap: "last",
-		scroll: 1,
-		visible: 1,
-		initCallback: mycarousel_initCallback,
-		itemFirstInCallback: mycarousel_itemFirstInCallback,
-        buttonNextHTML: null,
-        buttonPrevHTML: null
-	});
-});
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
 
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+//Social-media Form
+
+function myFunction() {
+  var x = document.getElementById('container-login');
+  if (x.style.visibility === 'hidden') {
+    x.style.visibility = 'visible';
+  } else {
+    x.style.visibility = 'hidden';
+  }
+}
+
+function Login() {
+  var x = document.getElementById('myDIV');
+  if (x.style.visibility === 'hidden') {
+    x.style.visibility = 'visible';
+  } else {
+    x.style.visibility = 'hidden';
+  }
+}
+
+
+
+
+
+// Get the modal (post1)
+var modal = document.getElementById("post1");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
