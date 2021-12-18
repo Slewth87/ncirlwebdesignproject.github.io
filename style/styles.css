@@ -36,21 +36,6 @@ input:hover,
   opacity: 1;
 }
 
-/* add appropriate colors to fb, twitter and google buttons */
-.fb {
-  background-color: #3B5998;
-  color: white;
-}
-
-.twitter {
-  background-color: #55ACEE;
-  color: white;
-}
-
-.google {
-  background-color: #dd4b39;
-  color: white;
-}
 
 /* style the submit button */
 input[type=submit] {
@@ -61,22 +46,6 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #45a049;
-}
-
-/* Two-column layout */
-.col {
-  float: left;
-  width: 50%;
-  margin: auto;
-  padding: 0 50px;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* vertical line */
@@ -127,7 +96,7 @@ input[type=submit]:hover {
     text-align: center;
   }
 }
-*/
+
 
 
 
@@ -190,7 +159,7 @@ p{
     position: relative;
     margin: 20px 0 0;
     padding: 10px 20px;
-    background-color: #e6fff2;
+    background-color: transparent;
     border: 1px solid #fff;
     color: #fff;
     transition: 0.5s;
