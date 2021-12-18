@@ -1,8 +1,7 @@
 // Manage the contact page input
 
 // Sets the webhook to send the data to
-// const hook = "https://dev.oscato.com/4sfwlyf";
-const hook = "https://hooks.slack.com/services/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"
+const hook = "https://dev.oscato.com/4sfwlyf";
 
 
 // validate email input
