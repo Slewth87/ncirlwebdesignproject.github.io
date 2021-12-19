@@ -148,6 +148,12 @@ a {
     width: 50px;
 }
 
+.error {
+    font-size: small;
+    color: red;
+    padding-bottom: 0px;
+}
+
 /* Storybook specific css management */
 
 @media (min-width: 1000px){

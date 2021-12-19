@@ -23,13 +23,13 @@
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!--Load custom code for managing the form-->
-    <script defer src="../script/script.min.js"></script>
+    <script defer src="../script/script.js"></script>
 
     <!--Use font-awesome fonts-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!--Set common CSS for the website, also includes CSS modifications for the Flipbook-->
-    <link href="../style/style.min.css" rel="stylesheet"/>
+    <link href="../style/style.css" rel="stylesheet"/>
         
   </head>
   <body>
@@ -37,16 +37,16 @@
     <!--Set navbar header for widescreen, using bootstrap-->
     <nav class="navbar navbar-expand-md navbar-light bg-white spacer" id="wide">
       <div class="container-fluid lefter">
-        <a class="spacer headline d-flex align-center" href="../index.html"><img src="../images/logo.webp" alt="Wallaby Books" height="45"><h3 class="pt-1">Wallaby Books</h3></a>
+        <a class="spacer headline d-flex align-center" href="../"><img src="../images/logo.webp" alt="Wallaby Books" height="45"><h3 class="pt-1">Wallaby Books</h3></a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../blog/index.html">Blog</a>
+            <a class="nav-link" href="../blog/">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../book/index.html">Book</a>
+            <a class="nav-link" href="../book/">Book</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Contact</a>
@@ -56,18 +56,18 @@
     </nav>
     <!--Set navbar header for narrow screens, using bootstrap-->
     <div class="container-fluid lefter narrow">
-      <a class="spacer headline d-flex justify-content-around" href="../index.html"><img src="../images/logo.webp" alt="Wallaby Books"></a>
+      <a class="spacer headline d-flex justify-content-around" href="../"><img src="../images/logo.webp" alt="Wallaby Books"></a>
       <nav class="navbar navbar-expand wrap navbar-light bg-white spacer">
         <div class="container d-flex justify-content-around">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home</a>
+              <a class="nav-link" href="../">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../blog/index.html">Blog</a>
+              <a class="nav-link" href="../blog/">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../book/index.html">Book</a>
+              <a class="nav-link" href="../book/">Book</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Contact</a>
@@ -90,8 +90,10 @@
           <form id="contactForm">
             <label for="email">Your e-mail<span class="required">*</span></label><br/>
             <input type="email" id="email" required size="25"><br/>
+            <p id="emailError" class="error"></p>
             <label for="name">Name<span class="required">*</span></label><br/>
-            <input type="text" id="name" required size="25"><br/>
+            <input type="text" id="name" required size="25" onfocusout="blankChecker(this.id)"><br/>
+            <p id="nameError" class="error"></p>
             <label for="phone">Phone</label><br/>
             <select name="countryCode" id="phoneCode">
               <option data-countryCode="IE" value="353" Selected>Ireland (+353)</option>
@@ -315,10 +317,13 @@
               </optgroup>
             </select>
             <input type="tel" id="phone" size="19"><br/>
+            <p id="phoneError" class="error"></p>
             <label for="subject">Subject<span class="required">*</span></label><br/>
-            <input type="text" id="subject" required size="25"><br/>
+            <input type="text" id="subject" required size="25" onfocusout="blankChecker(this.id)"><br/>
+            <p id="subjectError" class="error"></p>
             <label for="message">message<span class="required">*</span></label><br/>
-            <textarea id="message" required cols="24"></textarea><br/>
+            <textarea id="message" required cols="24" onfocusout="blankChecker(this.id)"></textarea><br/>
+              <p id="messageError" class="error"></p>
             <input type="submit" id="sendMail" value="Send">
           </form>
 
