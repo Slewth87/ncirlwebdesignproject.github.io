@@ -61,43 +61,7 @@
         </div>
       </nav>
     </div>
-
-		<!--sign up-->
-	<div class="container" id="welcome">
-		<div>
-			<h3>Welcolcome<img src="../images/01.webp" alt="">Blog for book lovers<h3>
-		</div>
 		
-		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-			<div id="id01" class="modal">
-				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-					<form class="modal-content" action="/action_page.php">
-						<div class="container">
-							<h1>Sign Up</h1>
-							<p>Please fill in this form to create an account.</p>
-							<hr>
-							<label for="email"><b>Email</b></label>
-								<input type="text" placeholder="Enter Email" name="email" required>
-						
-							<label for="psw"><b>Password</b></label>
-								<input type="password" placeholder="Enter Password" name="psw" required>
-						
-							<label for="psw-repeat"><b>Repeat Password</b></label>
-								<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-							
-							<label>
-								<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-							</label>
-
-							<div class="clearfix">
-								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-								<button type="submit" class="signupbtn">Sign Up</button>
-							</div>
-						</div>
-					</form>
-			</div>
-		</div>
-			
 		<!--Cards-->
 		<div class="wrapper">
 			<div class="contaner">
@@ -105,30 +69,17 @@
 					<div class="content">
 						<h2>1</h2>
 						<h3>How reading changes your perspective</h3>
-						<button id="myBtn">Read more</button>
-						<!--The Modal-->
-						<div id="myModal" class="modal">
-							<!--Modal content-->
-							<div class="modal-content">
-								<span class="close">&times;</span>
-								<p>Reading Books Improves Imagination<br/>
-									Books are one of the most creative art forms. Every book that we read opens up a world of different characters, different storylines and different locations. Reading requires us to open up our mind to the world of imagination to experience our own perspective of the story. Our imagination and creativity automatically increase as we are enlightened with all the knowledge from a book.<br/>
-									Reading Books Helps You Grow<br/>
-									Reading about people's success stories and the struggles they went through to get to that position will inspire and help you grow in your own personal life. All of us need the motivation to move ahead in life. And books are the best medium for that. They give us the chance to tap into the character's emotions and understand how they feel. These stories go on to become inspirations for us to keep moving upward on the ladder called life.<br/>
-									Reading Books Builds Confidence<br/>
-									When we read books, we read about the various struggles and hardships that the characters go through. Sometimes we even relate those situations to our personal lives. Understanding how these characters overcome challenges in a positive way ultimately gives us the confidence to deal with difficult situations in our personal lives in a better way. A carefully crafted book helps you build all the strong and right opinions and gives you the confidence to stand by it.<br/>
-									Reading Books Increases Knowledge</b>
-									In the words of George RR Martin, “A reader lives a thousand lives before he dies. The man who never reads only lives once”. It's true, we live only one life. But when we read books we gain knowledge from thousands. Age does not matter when it comes to gaining knowledge from reading books. As it enhances the power of thinking in every field and simultaneously improves our vocabulary to a great extent.</p>
-							</div>
-						</div>
+						<p>Reading Books Improves Imagination<br/>
+							Books are one of the most creative art forms. Every book that we read opens up a world of. . .</p>
+						<button id="btn1" onclick="articleLoad(this.id)">Read more</button>
 					</div>
 				</div>
 				<div class="box">
 					<div class="content">
 					<h2>2</h2>
 					<h3>The art of writing</h3>
-					<p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading...</p>
-					<button>Read more</button>
+					<p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading. . .</p>
+					<button id="btn2" onclick="articleLoad(this.id)">Read more</button>
 					</div>
 				</div>
 				<div class="box">
@@ -136,7 +87,7 @@
 					<h2>3</h2>
 					<h3>My new digital reading habits</h3>
 					<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more...</p>
-					<button>Read more</button>
+					<button id="btn3" onclick="articleLoad(this.id)">Read more</button>
 					</div>
 				</div>
 				<div class="box">
@@ -144,7 +95,7 @@
 						<h2>4</h2>
 						<h3>The Best Vacation Books You Will Ever Read</h3>
 						<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more...</p>
-						<button>Read more</button>
+						<button id="btn4" onclick="articleLoad(this.id)">Read more</button>
 					</div>
 				</div>
 				<div class="box">
@@ -152,10 +103,14 @@
 						<h2>5</h2>
 						<h3>Favorite Audiobooks</h3>
 						<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more...</p>
-						<button>Read more</button>
+						<button id="btn2" onclick="articleLoad(this.id)">Read more</button>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="subpage container">
+			<h2 id="articleHead" class="row justify-content-around"></h2>
+			<p id="articleBody"></p>
 		</div>
 			<!-- footer section starts  -->
 
