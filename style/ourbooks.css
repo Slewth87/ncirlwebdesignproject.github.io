@@ -17,7 +17,6 @@
     outline: none; border:none;
     text-decoration: none;
     transition:all .2s linear;
-    transition:width none;
 }
 
 html {
@@ -175,18 +174,6 @@ section{
 
 
 /* media queries  */
-
-@media (max-width:all){
-
-    html{
-        font-size: 55%;
-    }
-
-    section{
-        padding:3rem 2rem;
-    }
-
-}
 
 @media (max-width:768px){
 
